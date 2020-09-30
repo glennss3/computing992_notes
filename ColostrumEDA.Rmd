@@ -8,7 +8,7 @@ output: pdf_document
 ```{r}
 setwd("~/Documents/Consulting/Joana, Calf graphs/Colostrum")
 data <- read.csv("Colostrum.csv")
-data <- data[1:129,]
+data <- data[1:115,]
 
 ##Looking for multicolinearity in coavraites
 library(dplyr)
