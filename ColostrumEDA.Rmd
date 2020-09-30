@@ -8,7 +8,7 @@ output: pdf_document
 ```{r}
 setwd("~/Documents/Consulting/Joana, Calf graphs/Colostrum")
 data <- read.csv("Colostrum.csv")
-data <- data[1:129,]
+data <- data[4:129,]
 
 ##Looking for multicolinearity in coavraites
 library(dplyr)
@@ -26,7 +26,7 @@ corrplot(M, type="upper", order="hclust",
 
 library(car)
 library(lattice)
-pairs(~Treat+Birth+AgeDay+AgeYear+Parity+IA+DryPeriod+DIM+DIM305+TotMilk+Calving+CalvingTime+ColWeight+Brix+IcaCalve+IcaMilk+Breed+Sex, data=covariates, main="Correlation All covaraites")
+pairs(~Treat+Birth+AgeDay+AgeYear+Parity+IA+DryPeriod+DIM+DIM305+TotMilk+Calving+CalvingTime+ColWeight+Brix+IcaCalve+IcaMilk+Breed+Sex, data=covariates, main="Correlation between All covaraites")
 
 pairs(~Birth+AgeDay+AgeYear+IA+DryPeriod+DIM+DIM305+TotMilk+Calving+CalvingTime+ColWeight+Brix+IcaCalve+IcaMilk, data=covariates, main="Correlation Continous Covariates")
 
