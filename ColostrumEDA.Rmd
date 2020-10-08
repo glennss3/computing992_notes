@@ -44,7 +44,7 @@ control <- Control %>%
   select(Birth, AgeDay, AgeYear, Parity, IA, DryPeriod, DIM, DIM305, TotMilk, Calving, CalvingTime, ColWeight, Brix, IcaCalve, IcaMilk, Breed, Sex) %>%
   mutate_all(funs(as.numeric))
 
-pairs(~Birth+AgeDay+AgeYear+IA+DryPeriod+DIM+DIM305+TotMilk+Calving+CalvingTime+ColWeight+Brix+IcaCalve+IcaMilk, data=control, main="Correlation Continous Covariates")
+pairs(~AgeDay+AgeYear+IA+DryPeriod+DIM+DIM305+TotMilk+Calving+CalvingTime+ColWeight+Brix+IcaCalve+IcaMilk, data=control, main="Correlation Continous Covariates")
 ```
 
 ```{r}
